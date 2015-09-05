@@ -1,0 +1,19 @@
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix;
+}
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left:  ceil(($gutter / -2));
+  margin-right: floor(($gutter / -2));
+  @include clearfix;
+}
+
