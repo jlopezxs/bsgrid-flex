@@ -1,8 +1,8 @@
 {
     "name": "bsgrid-flex",
     "description": "Bootstrap 3 Grid based on flex",
-    "version": "0.1.0",
-    "main": "lib/main.scss",
+    "version": "0.1.1",
+    "main": "dist/bsgrid-flex.min.css",
     "license": "MIT",
     "ignore": [
         ".gitignore",
