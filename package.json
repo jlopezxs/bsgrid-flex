@@ -18,6 +18,7 @@
     },
     "scripts": {
         "build": "sass-composer ./lib/main.scss -o ./dist/bsgrid-flex.css",
+        "prefix": "prefixr --input ./dist/bsgrid-flex.css ./dist/bsgrid-flex.css --output styles.css --compress",
         "min": "minify ./dist/bsgrid-flex.css > ./dist/bsgrid-flex.min.css"
     },
     "repository": {

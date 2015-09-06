@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>bsgrid flex</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="../dist/bsgrid-flex.min.css">
+    <style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+        color: #333;
+        background-color: #FFF;
+        margin: 0;
+        padding: 0;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    h4 {
+        margin-top: 25px;
+    }
+    
+    .row {
+        margin-bottom: 20px;
+    }
+    
+    .row .row {
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    
+    [class*="col-"] {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #eee;
+        background-color: rgba(86, 61, 124, .15);
+        border: 1px solid #ddd;
+        border: 1px solid rgba(86, 61, 124, .2);
+    }
+    
+    hr {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+body, html {
+  background: #fff;
+  color: #212121;
+  margin: 0; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+nav.sidebar {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #455A64;
+  text-align: center;
+  height: 100vh; }
+  nav.sidebar header.profile {
+    padding: 2em; }
+    nav.sidebar header.profile .profile-picture {
+      width: 125px;
+      height: 125px;
+      border-radius: 50%; }
+
+h1 {
+  font-family: 'Roboto', serif;
+  font-weight: 500; }
+
+.blog-post {
+  background: red; }
+
+.hero-image {
+  background-size: cover; }
+    </style>
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div class="row">
+    <nav class="sidebar col-md-3">
+      <header class="profile"><a href="http://carloscuesta.me"><img src="http://placehold.it/150x150" alt="" class="profile-picture"></a>
+        <h1 class="profile-name">Carlos Cuesta</h1>
+        <p class="profile-bio">Lorem ipsum dolor sit amet consecteur lorem ipsum dolor sit amet consecteur lorem ipsum dolor sit amet consecteur</p>
+      </header>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+      <ul class="nav-social">
+        <li class="social-twitter"><a href="http://twitter.com/carloscuestadev">Twitter</a></li>
+        <li class="social-github"><a href="http://github.com/carloscuesta">Github</a></li>
+        <li class="social-linkedin"><a href="https://es.linkedin.com/in/crloscuesta">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <div class="col-md-9"></div>
+    <!--.hero-image(style="background:url('http://placehold.it/1920x1080&text=Hero+Image') center center;")
+    .header
+        h1 Hi this is a hero image!
+    -->
+    </div>
+  </body>
+
+</html>
