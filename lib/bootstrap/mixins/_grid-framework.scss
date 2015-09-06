@@ -1,0 +1,58 @@
+// Grid Framework
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+    @for $i from (1 + 1) through $grid-columns {
+        $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+    }
+    #{$list} {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        padding-left: ceil(($grid-gutter-width / 2));
+        padding-right: floor(($grid-gutter-width / 2));
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@mixin make-auto-grid-columns($list: ".col-xs, .col-sm, .col-md, .col-lg") {
+    #{$list} {
+        box-sizing: border-box;
+        flex: 0 0 auto;
+        padding-left: ceil(($grid-gutter-width / 2));
+        padding-right: floor(($grid-gutter-width / 2));
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+@mixin calc-grid-column($index, $class, $type) {
+    @if ($type==width) and ($index > 0) {
+        .col-#{$class}-#{$index} {
+            flex-basis: percentage(($index / $grid-columns));
+            max-width: percentage(($index / $grid-columns));
+        }
+    }
+    @if ($type==offset) {
+        .col-#{$class}-offset-#{$index} {
+            margin-left: percentage(($index / $grid-columns));
+        }
+    }
+    @if ($type==auto) {
+        .col-#{$class} {
+            flex-grow: 1;
+            flex-basis: 0px;
+            max-width: 100%;
+        }
+    }
+}
+
+@mixin loop-grid-columns($columns, $class, $type) {
+    @for $i from 0 through $columns {
+        @include calc-grid-column($i, $class, $type);
+    }
+}
+
+@mixin make-grid($class) {
+    @include loop-grid-columns($grid-columns, $class, width);
+    @include loop-grid-columns($grid-columns, $class, offset);
+    @include calc-grid-column($grid-columns, $class, auto);
+}

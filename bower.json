@@ -1,9 +1,28 @@
 {
-  "name": "bsgrid-flex",
-  "private": true,
-  "dependencies": {},
-  "devDependencies": {
-    "chai": "~3.2.0",
-    "mocha": "~2.3.0"
-  }
+    "name": "bsgrid-flex",
+    "description": "Bootstrap 3 Grid based on flex",
+    "version": "0.1.0",
+    "main": "lib/main.scss",
+    "license": "MIT",
+    "ignore": [
+        ".gitignore",
+        ".editorconfig",
+        "travis.yml"
+    ],
+    "authors": ["Jordi López"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jlopezxs/bsgrid-flex"
+    },
+    "keywords": [
+        "bootstrap",
+        "grid",
+        "flex",
+        "flexbox",
+        "scss",
+        "npm",
+        "sass-composer",
+        "rwd",
+        "responsive"
+    ]
 }
